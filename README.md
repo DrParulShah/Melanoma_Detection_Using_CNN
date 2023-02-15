@@ -2,7 +2,6 @@
 > To build a multiclass CNN based classification model in TensorFlow which can accurately detect melanoma. 
 Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
 
-
 ## Table of Contents
 * [General Information](#general-information)
 * [Project Pipeline](#flow-of-the-code)
@@ -11,7 +10,6 @@ Melanoma is a type of cancer that can be deadly if not detected early. It accoun
 * [Acknowledgements](#acknowledgements)
 
 <!-- You can include any other section that is pertinent to your problem -->
-
 ## General Information
 - Provide general information about your project here.
 - What is the background of your project?
@@ -19,7 +17,6 @@ Melanoma is a type of cancer that can be deadly if not detected early. It accoun
 - What is the dataset that is being used?
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
 ## Project Pipeline
 - Data Reading/Data Understanding → Defining the path for train and test images 
 - Dataset Creation→ Create train & validation dataset from the train directory with a batch size of 32. Also, make sure you resize your images to 180*180.
@@ -45,7 +42,7 @@ Melanoma is a type of cancer that can be deadly if not detected early. It accoun
 	- Train the model for ~30 epochs
 	- Write your findings after the model fit, see if the issues are resolved or not?
  
-## Dataset used:
+### Dataset used:
 The dataset consists of 2357 images of malignant and benign oncological diseases, which were formed from the International Skin Imaging Collaboration (ISIC). All images were sorted according to the classification taken with ISIC, and all subsets were divided into the same number of images, with the exception of melanomas and moles, whose images are slightly dominant.
 
 The data set contains the following diseases:
@@ -60,8 +57,7 @@ The data set contains the following diseases:
 - Squamous cell carcinoma
 - Vascular lesion
 
-![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.jpg)
-
+![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses)
 
 Observations on class distribution:
 
@@ -73,8 +69,7 @@ So there is a clear class imbalance in the data which is not a good quality for 
 ![Class Distribution graph](images/class_distribution.png)
 ![Class Distribution graph](images/class_distribution2.png)
 
-
-## CNN Architecture Design:
+### CNN Architecture Design:
 To classify skin cancer using skin lesions images wit goal of higher accuracy on the classification task, I have built three custom CNN models wic comprises of following layers/modules:
 
 - Rescalling Layer - To rescale an input in the [0, 255] range to be in the [0, 1] range.

@@ -103,6 +103,8 @@ This model had following configuration
 
 ![Third Model Architecture](images/CNN_model3.png)
 
+#### Model 3b:
+![Third Model Architecture](images/CNN_model3b.png)
 
 ## Performance Evaluation and Conclusions:
 Observations and learnings from First CNN Model (no dropout, no data augmentation):
@@ -132,7 +134,23 @@ Observations and learnings from Second CNN Model (no dropout, used data augmenta
 Observations and learnings from Third CNN Model (used dropout, used data augmentation):
 ![model 3 performance](images/CNN_model3_Training_Performance.png)
 
-- Augmentor added 500 augmented images in each class which did help in overcoming overfitting problem (due to class imbalance) to a great extent
+Used Augmentor to add 500 augmented images in each class to overcome overfitting problem (due to class imbalance). But did that help?
+
+There is a lot to learn and infer from this model's training performance:
+- Training accuracy was increasing almost consistently (except one dip towards the end)
+- Validation accuracy, though a little up-&-down, was increasing epoch 21, after which it was unstable and trend was more downward
+- interestingly, epoch 21 had training and validation accuracy quite close to each other at 75% & 77%. At this point model almost overcame the overfitting
+- However final training accuracy of 79.86%, though an improvement from the previous model (model2) is still not acceptable. Moreover, final validation accurac is too low (14%) again pointing at overfitting
+
+So what do we do now? How to improve this model?
+- low accuracy indicates that we are missing out on some important features. Not using a dropout layer after convolution layer may help in retaining important features.
+- but to overcome overfitting we need dropout layer at least between dense layers.
+- also use early stopping in case the metric is not improving for a few consecutive epochs
+
+So giving it one more try in order to get better trained model.
+
+![model 3 performance](images/CNN_model3b_Training_Performance.png)
+
 - However, it is still possible to improve the model further, one can experiment with following (could not try everting as google colab can be used for limited time):
 	- different filter sizes
 	- different combination of convolutation layers (check what appens wen we increase / decrease layers, change number of filters in each layers) 

@@ -57,7 +57,7 @@ The data set contains the following diseases:
 - Squamous cell carcinoma
 - Vascular lesion
 
-![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.png)
+![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses | width = 100)
 
 Observations on class distribution:
 
@@ -88,7 +88,7 @@ This model had following configuration
 ![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)
 
 
-#### Model 2:
+#### Model 2 Arcitecture:
 
 #### Sample of augmented images added by operations like rotation, flipping etc.
 ![augmentation_sample](images/augmentation_sample.jpg)
@@ -96,15 +96,15 @@ This model had following configuration
 ![Second Model Architecture](images/CNN_model2.png)
 
 
-#### Model 3:
+#### Model 3 Arcitecture:
 - USed augmentor to add 500 augmented images in each class to overcome overfitting due to class imbalance
 
 ![Augmentation](images/number_of_images_in_each_class_postAugmentation.jpg)
 
 ![Third Model Architecture](images/CNN_model3.png)
 
-#### Model 3b:
-![Third Model Architecture](images/CNN_model3b.png)
+#### Model 3b Arcitecture:
+![Third Model b Architecture](images/CNN_model3b.png)
 
 ## Performance Evaluation and Conclusions:
 Observations and learnings from First CNN Model (no dropout, no data augmentation):
@@ -138,7 +138,7 @@ Used Augmentor to add 500 augmented images in each class to overcome overfitting
 
 There is a lot to learn and infer from this model's training performance:
 - Training accuracy was increasing almost consistently (except one dip towards the end)
-- Validation accuracy, though a little up-&-down, was increasing epoch 21, after which it was unstable and trend was more downward
+- Validation accuracy, though a little up-&-down, was increasing till epoch 21, after which it was unstable and trend was more downward
 - interestingly, epoch 21 had training and validation accuracy quite close to each other at 75% & 77%. At this point model almost overcame the overfitting
 - However final training accuracy of 79.86%, though an improvement from the previous model (model2) is still not acceptable. Moreover, final validation accurac is too low (14%) again pointing at overfitting
 
@@ -149,7 +149,7 @@ So what do we do now? How to improve this model?
 
 So giving it one more try in order to get better trained model.
 
-![model 3 performance](images/CNN_model3b_Training_Performance.png)
+![model 3b performance](images/CNN_model3b_Training_Performance.png)
 
 - However, it is still possible to improve the model further, one can experiment with following (could not try everting as google colab can be used for limited time):
 	- different filter sizes

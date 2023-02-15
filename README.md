@@ -57,8 +57,8 @@ The data set contains the following diseases:
 - Squamous cell carcinoma
 - Vascular lesion
 
-![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.png)
-<img src="images/sample_image_of_9cancerClasses.png " width="100" height="100">
+<![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.png)>
+<img src="images/sample_image_of_9cancerClasses.png " width="250" height="250">
 
 Observations on class distribution:
 
@@ -66,9 +66,14 @@ Observations on class distribution:
 - seborrheic keratosis and dermatofibroma have least number of images, 77 and 95 respectively
 
 So there is a clear class imbalance in the data which is not a good quality for training data. However, let us see how the training goes. If the model is biased or overfitted or underfitted, we might have to do something to correct this imbalance.
-![Class Distribution num](images/number_of_images_in_each_class.jpg)
-![Class Distribution graph](images/class_distribution.png)
-![Class Distribution graph](images/class_distribution2.png)
+<![Class Distribution num](images/number_of_images_in_each_class.jpg)>
+<img src="images/number_of_images_in_each_class.jpg " width="250" height="250">
+
+<![Class Distribution graph](images/class_distribution.png)>
+<img src="images/class_distribution.png " width="250" height="250">
+
+<![Class Distribution graph](images/class_distribution2.png)>
+<img src="images/class_distribution2.png" width="250" height="250">
 
 ### CNN Architecture Design:
 To classify skin cancer using skin lesions images wit goal of higher accuracy on the classification task, I have built three custom CNN models wic comprises of following layers/modules:
@@ -86,7 +91,9 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 ### CNN Models trained:
 #### Model 1 Arcitecture:
 This model had following configuration
-![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)
+<![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)>
+
+<img src="images/CNN_model1_NoDropOut_NoAugmentation.png" width="250" height="250">
 
 
 #### Model 2 Arcitecture:

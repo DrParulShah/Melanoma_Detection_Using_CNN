@@ -93,26 +93,36 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 This model had following configuration
 <!-- [First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png) -->
 
-<img src="images/CNN_model1_NoDropOut_NoAugmentation.png" width="300" height="600">
+<img src="images/CNN_model1_NoDropOut_NoAugmentation.png" width="250" height="600">
 
 
 #### Model 2 Arcitecture:
 
 #### Sample of augmented images added by operations like rotation, flipping etc.
-![augmentation_sample](images/augmentation_sample.jpg)
+<!-- [augmentation_sample](images/augmentation_sample.jpg) -->
+<img src="images/augmentation_sample.jpg" width="300" height="300">
 
-![Second Model Architecture](images/CNN_model2.png)
+
+<!-- [Second Model Architecture](images/CNN_model2.png) -->
+<img src="images/CNN_model2.png" width="250" height="600">
+
 
 
 #### Model 3 Arcitecture:
 - USed augmentor to add 500 augmented images in each class to overcome overfitting due to class imbalance
 
-![Augmentation](images/number_of_images_in_each_class_postAugmentation.jpg)
+<!-- [Augmentation](images/number_of_images_in_each_class_postAugmentation.jpg) -->
+<img src="images/number_of_images_in_each_class_postAugmentation.jpg" width="300" height="300">
 
-![Third Model Architecture](images/CNN_model3.png)
+
+<!-- [Third Model Architecture](images/CNN_model3.png) -->
+<img src="images/CNN_model3.png" width="250" height="600">
+
 
 #### Model 3b Arcitecture:
-![Third Model b Architecture](images/CNN_model3b.png)
+<!-- [Third Model b Architecture](images/CNN_model3b.png) -->
+<img src="images/CNN_model3bb.png" width="250" height="600">
+
 
 ## Performance Evaluation and Conclusions:
 Observations and learnings from First CNN Model (no dropout, no data augmentation):

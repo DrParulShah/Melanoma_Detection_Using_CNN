@@ -60,14 +60,17 @@ The data set contains the following diseases:
 - Squamous cell carcinoma
 - Vascular lesion
 
+![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.jpg)
+
+
 Observations on class distribution:
 
 - pigmented benign keratosis and melanoma have larger number of images, 462 and 438 respectively
 - seborrheic keratosis and dermatofibroma have least number of images, 77 and 95 respectively
 
 So there is a clear class imbalance in the data which is not a good quality for training data. However, let us see how the training goes. If the model is biased or overfitted or underfitted, we might have to do something to correct this imbalance.
-
-![My animated logo](images/class_distribution.png)
+![Class Distribution num](images/number_of_images_in_each_class.jpg)
+![Class Distribution graph](images/class_distribution.png)
 
 
 
@@ -85,10 +88,13 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 
 
 ### CNN Models trained:
-#### Model 1:
+#### Model 1 Arcitecture:
+![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)
 
 
 #### Model 2:
+
+![augmentation_sample](images/augmentation_sample.jpg)
 
 
 #### Model 3:

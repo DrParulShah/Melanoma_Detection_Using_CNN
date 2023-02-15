@@ -57,7 +57,7 @@ The data set contains the following diseases:
 - Squamous cell carcinoma
 - Vascular lesion
 
-![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses)
+![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.png)
 
 Observations on class distribution:
 

@@ -89,26 +89,25 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 
 
 ### CNN Models trained:
-#### Model 1 Arcitecture:
+#### Model 1 Architecture:
 This model had following configuration
 <!-- [First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png) -->
 
 <img src="images/CNN_model1_NoDropOut_NoAugmentation.png" width="250" height="600">
 
 
-#### Model 2 Arcitecture:
+#### Model 2 Architecture:
+
+<!-- [Second Model Architecture](images/CNN_model2.png) -->
+<img src="images/CNN_model2.png" width="250" height="600">
+
 
 #### Sample of augmented images added by operations like rotation, flipping etc.
 <!-- [augmentation_sample](images/augmentation_sample.jpg) -->
 <img src="images/augmentation_sample.jpg" width="300" height="300">
 
 
-<!-- [Second Model Architecture](images/CNN_model2.png) -->
-<img src="images/CNN_model2.png" width="250" height="600">
-
-
-
-#### Model 3 Arcitecture:
+#### Model 3 Architecture:
 - USed augmentor to add 500 augmented images in each class to overcome overfitting due to class imbalance
 
 <!-- [Augmentation](images/number_of_images_in_each_class_postAugmentation.jpg) -->
@@ -119,9 +118,9 @@ This model had following configuration
 <img src="images/CNN_model3.png" width="250" height="600">
 
 
-#### Model 3b Arcitecture:
+#### Model 3b Architecture:
 <!-- [Third Model b Architecture](images/CNN_model3b.png) -->
-<img src="images/CNN_model3bb.png" width="250" height="600">
+<img src="images/CNN_model3b.png" width="250" height="600">
 
 
 ## Performance Evaluation and Conclusions:
@@ -139,7 +138,7 @@ How to improve this model?
 - we can try and augment the training data in order to balance te class distribution
 
 
-Observations and learnings from Second CNN Model (no dropout, used data augmentation):
+Observations and learnings from Second CNN Model (used dropout and custom data augmentation):
 <!-- [model 2 performance](images/CNN_model2_Training_Performance.png) -->
 <img src="images/CNN_model2_Training_Performance.png" width="300" height="300">
 
@@ -152,7 +151,7 @@ Observations and learnings from Second CNN Model (no dropout, used data augmenta
 
 
 
-Observations and learnings from Third CNN Model (used dropout, used data augmentation):
+Observations and learnings from Third CNN Model (used dropout & data augmentator):
 <!-- [model 3 performance](images/CNN_model3_Training_Performance.png) -->
 <img src="images/CNN_model3_Training_Performance.png" width="300" height="300">
 
@@ -188,19 +187,20 @@ With more GPU time in hands, one can definitely get igher accuracy and save man 
 
 ## Environment and Tools Used
 1. Jupyter Notebook with Google Colab
-2. Numpy
-3. Pandas
-4. Scikit-image
-5. Matplotlib
-6. Scikit-learn
-7. Keras
+2. Tensorflow & Keras
+3. Numpy
+4. Pandas
+5. Scikit-image
+6. Matplotlib
+7. Scikit-learn
+
 
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
 ## Acknowledgements
-- Thanks to Upgrad Instructors and Live PI Sessions
-- Gratitude to Kaggle data sets and Google Colab platform
-- Gratitude to Github
+- Thanks to all thhe Upgrad Instructors and all the PI Sessions
+- Gratitude to Kaggle for the data sets and Google Colab GPU platform
+- Gratitude to Github platform
 
 
 ## Contact

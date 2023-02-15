@@ -1,13 +1,13 @@
-# Melanoma Detection Assignment
-> To build a multiclass CNN based classification model in TensorFlow which can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
+# Skin Cancer Detection using Multiclass Classification CNN Model 
+> To build a multiclass CNN based classification model in TensorFlow which can accurately detect melanoma. 
+Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
 
 
 ## Table of Contents
 * [General Information](#general-information)
 * [Project Pipeline](#flow-of-the-code)
 * [Environment and Tools Used](#technologies-used)
-* [Performance Evaluation](#models-performance-evaluation)
-* [Conclusions](#conclusions)
+* [Performance Evaluation and Conclusions](#models-performance-evaluation)
 * [Acknowledgements](#acknowledgements)
 
 <!-- You can include any other section that is pertinent to your problem -->
@@ -69,9 +69,9 @@ Observations on class distribution:
 - seborrheic keratosis and dermatofibroma have least number of images, 77 and 95 respectively
 
 So there is a clear class imbalance in the data which is not a good quality for training data. However, let us see how the training goes. If the model is biased or overfitted or underfitted, we might have to do something to correct this imbalance.
-![Class Distribution num](images/number_of_images_in_each_class.jpg "Number of Images in Eac Class")
+![Class Distribution num](images/number_of_images_in_each_class.jpg)
 ![Class Distribution graph](images/class_distribution.png)
-
+![Class Distribution graph](images/class_distribution2.png)
 
 
 ## CNN Architecture Design:
@@ -89,21 +89,35 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 
 ### CNN Models trained:
 #### Model 1 Arcitecture:
+This model had following configuration
 ![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)
 
 
 #### Model 2:
 
+#### Sample of augmented images added by operations like rotation, flipping etc.
 ![augmentation_sample](images/augmentation_sample.jpg)
+
+![Second Model Architecture](images/CNN_model2.png)
+
 
 
 #### Model 3:
+- USed augmentor to add 500 augmented imaes in each class to overcome overfitting due to class imbalance
+
+![Augmentation](images/number_of_images_in_each_class_postAugmentation.jpg)
+
+
+![Third Model Architecture](images/CNN_model3.png)
 
 
 
 
-## Performance Evaluation:
+## Performance Evaluation and Conclusions:
 Observations and learnings from First CNN Model (no dropout, no data augmentation):
+![model 1 performance](images/CNN_model1_Training_Performance.png)
+
+
 - While training accuracy is increasing almost consistently (at first rapidly and then slowly but steadil) from 0.28 to 0.94, validation accuracy is going up in a zig-zag manner but not able to cross 0.47. This clearly indicates that model is an overfit, remembering the training data well but nor performing half that well with unseen data
 - The loss graph also narates the same story. For training data, at first it decreses rapidly and then little slowly, from 10.94 to 0.14, which is very impressive. However, validation loss, togh have a decreasing trend, does so in a zig-zag fashion, with minimum loss value at 2.72. -in both the metrics, training data performance is good but on validation data, model is not doing a good job - indicating overfitting
 - Hence, first model clearly suffered due to class imbalanced and hence overfitted
@@ -111,6 +125,17 @@ Observations and learnings from First CNN Model (no dropout, no data augmentatio
 How to improve this model?
 - overfitting can be due to imbalance in the data which we had anticipated after class distribution visualization.
 - we can try and augment the training data in order to balance te class distribution
+
+
+Observations and learnings from Second CNN Model (no dropout, used data augmentation):
+![model 2 performance](images/CNN_model2_Training_Performance.png)
+
+- tried to manage data imbalance and overfitting by adding some images which were generated b rotating, flipping original images
+
+
+
+Observations and learnings from Tird CNN Model (used dropout, used data augmentation):
+
 
 
 ## Environment and Tools Used

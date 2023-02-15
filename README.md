@@ -69,7 +69,7 @@ Observations on class distribution:
 - seborrheic keratosis and dermatofibroma have least number of images, 77 and 95 respectively
 
 So there is a clear class imbalance in the data which is not a good quality for training data. However, let us see how the training goes. If the model is biased or overfitted or underfitted, we might have to do something to correct this imbalance.
-![Class Distribution num](images/number_of_images_in_each_class.jpg)
+![Class Distribution num](images/number_of_images_in_each_class.jpg "Number of Images in Eac Class")
 ![Class Distribution graph](images/class_distribution.png)
 
 

@@ -4,9 +4,9 @@
 
 ## Table of Contents
 * [General Information](#general-information)
-* [Project Pipeline] (#flow-of-the-code)
+* [Project Pipeline](#flow-of-the-code)
 * [Environment and Tools Used](#technologies-used)
-* [Performance Evaluation] (#models-performance-evaluation)
+* [Performance Evaluation](#models-performance-evaluation)
 * [Conclusions](#conclusions)
 * [Acknowledgements](#acknowledgements)
 
@@ -60,6 +60,17 @@ The data set contains the following diseases:
 - Squamous cell carcinoma
 - Vascular lesion
 
+Observations on class distribution:
+
+- pigmented benign keratosis and melanoma have larger number of images, 462 and 438 respectively
+- seborrheic keratosis and dermatofibroma have least number of images, 77 and 95 respectively
+
+So there is a clear class imbalance in the data which is not a good quality for training data. However, let us see how the training goes. If the model is biased or overfitted or underfitted, we might have to do something to correct this imbalance.
+
+![My animated logo](images/class_distribution.png)
+
+
+
 ## CNN Architecture Design:
 To classify skin cancer using skin lesions images wit goal of higher accuracy on the classification task, I have built three custom CNN models wic comprises of following layers/modules:
 
@@ -86,7 +97,14 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 
 
 ## Performance Evaluation:
-- First model clearl suffered due to class imbalanced and hence overfitted
+Observations and learnings from First CNN Model (no dropout, no data augmentation):
+- While training accuracy is increasing almost consistently (at first rapidly and then slowly but steadil) from 0.28 to 0.94, validation accuracy is going up in a zig-zag manner but not able to cross 0.47. This clearly indicates that model is an overfit, remembering the training data well but nor performing half that well with unseen data
+- The loss graph also narates the same story. For training data, at first it decreses rapidly and then little slowly, from 10.94 to 0.14, which is very impressive. However, validation loss, togh have a decreasing trend, does so in a zig-zag fashion, with minimum loss value at 2.72. -in both the metrics, training data performance is good but on validation data, model is not doing a good job - indicating overfitting
+- Hence, first model clearly suffered due to class imbalanced and hence overfitted
+
+How to improve this model?
+- overfitting can be due to imbalance in the data which we had anticipated after class distribution visualization.
+- we can try and augment the training data in order to balance te class distribution
 
 
 ## Environment and Tools Used
@@ -101,12 +119,13 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
 ## Acknowledgements
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+- Thanks to Upgrad Instructors and Live PI Sessions
+- Gratitude to Kaggle data sets and Google Colab platform
+- Gratitude to Github
 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@DrParulShah] - feel free to contact me!
+
 
 <!-- You don't have to include all sections - just the one's relevant to your project -->

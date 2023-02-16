@@ -88,7 +88,7 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 ### CNN Models trained:
 #### Model 1 Architecture:
 This model had following configuration
-![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)
+<![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)>
 
 Five more models were trained, basicall to experiment with various aspect of training to figure out what works best for the given problem.
 

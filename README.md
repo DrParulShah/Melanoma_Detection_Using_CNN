@@ -198,7 +198,7 @@ So experimented with some more configuration, performance of each can be seen as
 
 - So drop out and data augmentation is useful in overcoming overfitting
 
-- Also we can see that relativel higher number of convolution layers is helping in improving accuracy. This is because important features and patterns are identified better
+- Also we can see that relatively higher number of convolution layers is helping in improving accuracy. This is because important features and patterns are identified better
 
 ### This code opened up a lot of possibilities of how a CNN can do fantastic job in classifying something so useful, almost life saving.
 ### With more GPU time, one can definitely get higher accuracy and save man lives.

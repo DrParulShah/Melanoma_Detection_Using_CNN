@@ -58,7 +58,7 @@ The data set contains the following diseases:
 - Squamous cell carcinoma
 - Vascular lesion
 
-! [sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.png) 
+![sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.png) 
 
 Observations on class distribution:
 
@@ -66,11 +66,11 @@ Observations on class distribution:
 - seborrheic keratosis and dermatofibroma have least number of images, 77 and 95 respectively
 
 So there is a clear class imbalance in the data which is not a good quality for training data. However, let us see how the training goes. If the model is biased or overfitted or underfitted, we might have to do something to correct this imbalance.
-! [Class Distribution num](images/number_of_images_in_each_class.jpg)
+![Class Distribution num](images/number_of_images_in_each_class.jpg)
 
-! [Class Distribution graph](images/class_distribution.png)
+![Class Distribution graph](images/class_distribution.png)
 
-! [Class Distribution graph](images/class_distribution2.png)
+![Class Distribution graph](images/class_distribution2.png)
 
 ### CNN Architecture Design:
 To classify skin cancer using skin lesions images wit goal of higher accuracy on the classification task, I have built three custom CNN models wic comprises of following layers/modules:
@@ -88,7 +88,7 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 ### CNN Models trained:
 #### Model 1 Architecture:
 This model had following configuration
-<![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)>
+![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)
 
 Five more models were trained, basicall to experiment with various aspect of training to figure out what works best for the given problem.
 

@@ -59,7 +59,6 @@ The data set contains the following diseases:
 - Vascular lesion
 
 ! [sample_image_of_9cancerClasses](images/sample_image_of_9cancerClasses.png) 
-<!-- <img src="images/sample_image_of_9cancerClasses.png " width="300" height="300"> -->
 
 Observations on class distribution:
 
@@ -67,14 +66,11 @@ Observations on class distribution:
 - seborrheic keratosis and dermatofibroma have least number of images, 77 and 95 respectively
 
 So there is a clear class imbalance in the data which is not a good quality for training data. However, let us see how the training goes. If the model is biased or overfitted or underfitted, we might have to do something to correct this imbalance.
-<!-- [Class Distribution num](images/number_of_images_in_each_class.jpg) -->
-<img src="images/number_of_images_in_each_class.jpg " width="300" height="300">
+! [Class Distribution num](images/number_of_images_in_each_class.jpg)
 
-<!-- [Class Distribution graph](images/class_distribution.png) -->
-<img src="images/class_distribution.png " width="300" height="300">
+! [Class Distribution graph](images/class_distribution.png)
 
-<!-- [Class Distribution graph](images/class_distribution2.png) -->
-<img src="images/class_distribution2.png" width="300" height="300">
+! [Class Distribution graph](images/class_distribution2.png)
 
 ### CNN Architecture Design:
 To classify skin cancer using skin lesions images wit goal of higher accuracy on the classification task, I have built three custom CNN models wic comprises of following layers/modules:
@@ -92,42 +88,9 @@ To classify skin cancer using skin lesions images wit goal of higher accuracy on
 ### CNN Models trained:
 #### Model 1 Architecture:
 This model had following configuration
-<!-- [First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png) -->
+![First Model Architecture](images/CNN_model1_NoDropOut_NoAugmentation.png)
 
-<img src="images/CNN_model1_NoDropOut_NoAugmentation.png" width="250" height="600">
-
-
-#### Model 2 Architecture:
-
-<!-- [Second Model Architecture](images/CNN_model2.png) -->
-<img src="images/CNN_model2.png" width="250" height="600">
-
-
-#### Sample of augmented images added by operations like rotation, flipping etc.
-<!-- [augmentation_sample](images/augmentation_sample.jpg) -->
-<img src="images/augmentation_sample.jpg" width="300" height="300">
-
-
-#### Model 3 Architecture:
-- USed augmentor to add 500 augmented images in each class to overcome overfitting due to class imbalance
-
-<!-- [Augmentation](images/number_of_images_in_each_class_postAugmentation.jpg) -->
-<img src="images/number_of_images_in_each_class_postAugmentation.jpg" width="300" height="300">
-
-<!-- [Third Model Architecture](images/CNN_model3.png) -->
-<img src="images/CNN_model3.png" width="250" height="600">
-
-
-#### Model 3b Architecture:
-<!-- [Third Model b Architecture](images/CNN_model3b.png) -->
-<img src="images/CNN_model3b.png" width="250" height="600">
-
-#### Model 3c Architecture:
-<img src="images/CNN_model3c.png" width="250" height="600">
-
-#### Model 3d Architecture:
-<img src="images/CNN_model3d.png" width="250" height="600">
-
+Five more models were trained, basicall to experiment with various aspect of training to figure out what works best for the given problem.
 
 ## Performance Evaluation:
 Observations and learnings from First CNN Model 1 (no dropout, no data augmentation):
